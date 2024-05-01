@@ -11,10 +11,10 @@ public abstract class BaseModel {
     private String createdBy;
     private String updatedBy;
 
-    public BaseModel() {
+    protected BaseModel() {
     }
 
-    public BaseModel(int id, LocalDateTime createdAt, LocalDateTime updatedAt, String createdBy, String updatedBy) {
+    protected BaseModel(int id, LocalDateTime createdAt, LocalDateTime updatedAt, String createdBy, String updatedBy) {
         this.id = id;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
