@@ -94,4 +94,8 @@ public class ParkingLot extends  BaseModel{
     public void setSpotBookingStategy(SpotBookingStrategy spotBookingStategy) {
         this.spotBookingStategy = spotBookingStategy;
     }
+
+    public int getId(){
+        return this.id;
+    }
 }

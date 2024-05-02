@@ -61,4 +61,7 @@ public class ParkingFloor extends BaseModel{
     public void setParkingFloorStatus(ParkingFloorStatus parkingFloorStatus) {
         this.parkingFloorStatus = parkingFloorStatus;
     }
+    public int getId(){
+        return  id;
+    }
 }
