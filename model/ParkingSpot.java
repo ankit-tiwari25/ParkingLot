@@ -1,13 +1,31 @@
 package model;
 
+import model.constant.ParkingSpotStatus;
 import model.constant.VehicleType;
 
-public class ParkingSpot {
+public class ParkingSpot extends BaseModel{
     private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     private int number;
     private VehicleType vehicleType;
     private Vehicle vehicle;
+    private ParkingSpotStatus parkingSpotStatus;
 
+    public ParkingSpotStatus getParkingSpotStatus() {
+        return parkingSpotStatus;
+    }
+
+    public void setParkingSpotStatus(ParkingSpotStatus parkingSpotStatus) {
+        this.parkingSpotStatus = parkingSpotStatus;
+    }
 
     public ParkingSpot() {
     }
@@ -19,13 +37,7 @@ public class ParkingSpot {
         this.vehicle = vehicle;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public int getNumber() {
         return number;

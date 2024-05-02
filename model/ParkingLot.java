@@ -10,7 +10,7 @@ import java.util.List;
 public class ParkingLot extends  BaseModel{
     private String name;
     private String address;
-    private List<ParkingLot> floors;
+    private List<ParkingFloor> floors;
     private ParkingLotStatus parkingLotStatus;
     private List<VehicleType> vehicleTypesSupported;
     private int capacity;
@@ -20,7 +20,7 @@ public class ParkingLot extends  BaseModel{
     public ParkingLot() {
     }
 
-    public ParkingLot(String name, String address, List<ParkingLot> floors, ParkingLotStatus parkingLotStatus, List<VehicleType> vehicleTypesSupported, int capacity, BillGenerationStrategy billGenerationStrategy, SpotBookingStrategy spotBookingStategy) {
+    public ParkingLot(String name, String address, List<ParkingFloor> floors, ParkingLotStatus parkingLotStatus, List<VehicleType> vehicleTypesSupported, int capacity, BillGenerationStrategy billGenerationStrategy, SpotBookingStrategy spotBookingStategy) {
         this.name = name;
         this.address = address;
         this.floors = floors;
@@ -47,11 +47,11 @@ public class ParkingLot extends  BaseModel{
         this.address = address;
     }
 
-    public List<ParkingLot> getFloors() {
+    public List<ParkingFloor> getFloors() {
         return floors;
     }
 
-    public void setFloors(List<ParkingLot> floors) {
+    public void setFloors(List<ParkingFloor> floors) {
         this.floors = floors;
     }
 
@@ -97,5 +97,8 @@ public class ParkingLot extends  BaseModel{
 
     public int getId(){
         return this.id;
+    }
+    public  void setId(int id){
+        this.id = id;
     }
 }

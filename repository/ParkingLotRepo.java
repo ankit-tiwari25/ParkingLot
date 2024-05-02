@@ -3,10 +3,17 @@ package repository;
 import exception.ParkingLotNotFoundException;
 import model.ParkingLot;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class ParkingLotRepo {
     private Map<Integer, ParkingLot> parkingLotMap;
+    private static int idCounter = 0;
+
+    public ParkingLotRepo() {
+        this.parkingLotMap = new HashMap<>();
+    }
+
 
     public ParkingLot getParkingLot(int id){
         if(!parkingLotMap.containsKey(id)){
@@ -17,7 +24,10 @@ public class ParkingLotRepo {
     }
 
     public  void putParkingLot(ParkingLot parkingLot){
+
+        parkingLot.setId(++idCounter);
         parkingLotMap.put(parkingLot.getId(), parkingLot);
-        System.out.println("ParkingLot added successfully");
+        System.out.println("ParkingLot added successfully. ParkingLot Id : "+parkingLot.getId());
     }
+
 }

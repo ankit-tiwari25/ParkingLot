@@ -53,4 +53,7 @@ public class Gate extends BaseModel{
     public void setOperatorName(String operatorName) {
         this.operatorName = operatorName;
     }
+    public  int getId(){
+        return id;
+    }
 }
